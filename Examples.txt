@@ -1,0 +1,41 @@
+Person 2 minimax/alpha-beta comparison
+
+Generated from successful CLI executions; default handout evaluations.
+Run the commands from the project directory. Output files contain only the selected board.
+Person 3 may later append improved-evaluation comparisons to final team materials.
+
+Phase: Opening
+Input board: WWxBxxxxxxxxxxxxxxxxxxx
+Search depth: 3
+
+Command: python MiniMaxOpening.py examples/opening.txt chosen_minimax.txt 3
+Board Position: WWWxxxxxxxxxxxxxxxxxxxx
+Positions evaluated by static estimation: 7256
+MINIMAX estimate: 3
+
+Command: python ABOpening.py examples/opening.txt chosen_ab.txt 3
+Board Position: WWWxxxxxxxxxxxxxxxxxxxx
+Positions evaluated by static estimation: 382
+MINIMAX estimate: 3
+
+Comparison: same chosen board and MINIMAX estimate.
+Static evaluations: minimax 7256; alpha-beta 382.
+Alpha-beta avoids 6874 evaluations (94.74% fewer).
+
+Phase: Midgame/endgame
+Input board: xxxxxBxWWWWWBBBBxxxxxxx
+Search depth: 3
+
+Command: python MiniMaxGame.py examples/midgame.txt chosen_minimax.txt 3
+Board Position: WxxxxBxWxWWWBBBBxxxxxxx
+Positions evaluated by static estimation: 677
+MINIMAX estimate: 991
+
+Command: python ABGame.py examples/midgame.txt chosen_ab.txt 3
+Board Position: WxxxxBxWxWWWBBBBxxxxxxx
+Positions evaluated by static estimation: 233
+MINIMAX estimate: 991
+
+Comparison: same chosen board and MINIMAX estimate.
+Static evaluations: minimax 677; alpha-beta 233.
+Alpha-beta avoids 444 evaluations (65.58% fewer).

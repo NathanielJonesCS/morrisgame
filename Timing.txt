@@ -1,0 +1,60 @@
+Person 2 alpha-beta search timing (default handout evaluations)
+Measured UTC: 2026-10-03T02:11:58.844452+00:00
+Python: 3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]
+Platform: Windows-11-10.0.26200-SP0
+Processor: Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+Command: python benchmark_search.py --max-depth 6 --timeout 5 --output Timing.txt
+Per-process timeout: 5 seconds; one run per case/depth.
+search_s excludes interpreter startup; wall_s includes startup and shutdown.
+TIMEOUT has no completed evaluation count; deeper runs for that case are skipped.
+
+opening_empty: phase=opening, board=xxxxxxxxxxxxxxxxxxxxxxx
+depth  status     search_s     wall_s    evaluations
+    2  OK         0.002461   0.313879             44
+    3  OK         0.007233   0.294743            504
+    4  OK         0.059566   0.375730            922
+    5  OK         0.246391   0.525730          24380
+    6  OK         2.741784   3.032054          51298
+
+opening_capture: phase=opening, board=WWxBxxxxxxxxxxxxxxxxxxx
+depth  status     search_s     wall_s    evaluations
+    2  OK         0.001925   0.304657             39
+    3  OK         0.005485   0.298699            382
+    4  OK         0.038200   0.340437            722
+    5  OK         0.109101   0.413760           7134
+    6  OK         0.758638   1.068040          15370
+
+midgame_handout: phase=game, board=xxxxxBxWWWWWBBBBxxxxxxx
+depth  status     search_s     wall_s    evaluations
+    2  OK         0.002559   0.280217             32
+    3  OK         0.019016   0.318101            233
+    4  OK         0.086588   0.389936            929
+    5  OK         0.519572   0.825929           6673
+    6  OK         4.615878   4.931572          48892
+
+midgame_dense: phase=game, board=WxWWxWWWWWBBBBBBBBxxxxx
+depth  status     search_s     wall_s    evaluations
+    2  OK         0.001861   0.294745             15
+    3  OK         0.014403   0.318839            129
+    4  OK         0.054817   0.356008            470
+    5  OK         0.362647   0.654813           3312
+    6  OK         1.418649   1.718352          11306
+
+hopping: phase=game, board=WWxxxWxxxxBBBxxxxxxxxxx
+depth  status     search_s     wall_s    evaluations
+    2  OK         0.066154   0.365763            206
+    3  OK         1.094561   1.385415           4106
+    4  TIMEOUT           -   5.028959              -
+
+opening_empty: completed depths 2, 3, 4, 5, 6.
+opening_capture: completed depths 2, 3, 4, 5, 6.
+midgame_handout: completed depths 2, 3, 4, 5, 6.
+midgame_dense: completed depths 2, 3, 4, 5, 6.
+hopping: completed depths 2, 3.
+Deepest completed depths are tested depths, not proven maximum depths.
+Measure on the tournament computer; Person 3's improved evaluator can change runtime.
+These boards do not guarantee a runtime bound for every position.
+The four-minute response limit includes operating and posting the move.
+Use --timeout 180 for a longer local study, leaving operational room.
+Conservative starting point: depth 3 completed for every selected case.
+Treat this as a starting point for local testing, not a guaranteed tournament depth.
