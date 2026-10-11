@@ -1,8 +1,4 @@
-Person 2 minimax/alpha-beta comparison
-
-Generated from successful CLI executions; default handout evaluations.
-Run the commands from the project directory. Output files contain only the selected board.
-Person 3 may later append improved-evaluation comparisons to final team materials.
+MINIMAX/ALPHA-BETA Comparison
 
 Phase: Opening
 Input board: WWxBxxxxxxxxxxxxxxxxxxx
@@ -39,3 +35,7 @@ MINIMAX estimate: 991
 Comparison: same chosen board and MINIMAX estimate.
 Static evaluations: minimax 677; alpha-beta 233.
 Alpha-beta avoids 444 evaluations (65.58% fewer).
+
+---
+
+MINIMAX/ALPHA-BETA Comparisons (After SEF Imporvements)

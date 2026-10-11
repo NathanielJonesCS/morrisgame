@@ -2,7 +2,10 @@
 
 import sys
 
-from MiniMaxOpening import _search, _run_cli
+from cli_helper import (
+                _search, 
+                _run_cli
+)
 from morris import (
     GenerateMovesMidgameEndgame, GenerateMovesMidgameEndgameBlack,
     staticEstimationMidgameEndgame,

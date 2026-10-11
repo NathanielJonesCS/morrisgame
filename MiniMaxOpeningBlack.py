@@ -9,7 +9,12 @@ Uses the handout's color-swap method:
   3. swap colors back in the chosen board.
 """
 import sys
-from morris import read_board, write_board, swap_colors
+from morris import (
+            read_board, 
+            write_board, 
+            swap_colors
+)
+
 from MiniMaxOpening import minimax_opening
 
 if __name__ == "__main__":
